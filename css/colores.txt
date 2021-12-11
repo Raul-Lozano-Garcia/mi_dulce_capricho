@@ -1,0 +1,2 @@
+Primario: #E4D9CC
+Secundario: #CECCE4
