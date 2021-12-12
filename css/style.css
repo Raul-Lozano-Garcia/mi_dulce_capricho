@@ -79,6 +79,7 @@ header img{
 header i{
     color: var(--principal-claro);
     font-size: 2em;
+    cursor: pointer;
 }
 
 header .hamburguesa{
@@ -724,3 +725,186 @@ footer small{
         gap: 2em;
     }
 }
+
+/* BLOG */
+#blog{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 4em 0;
+}
+
+#blog h1{
+    text-align: center;
+    font-size: 3em;
+}
+
+#blog>p{
+    margin: 2em 0 3em;
+    text-align: center;
+}
+
+#blog #entradas{
+    padding: 0 2em;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+                        "principal principal primero segundo"
+                        "principal principal tercero cuarto";
+    gap: 2em;
+}
+
+.principal{
+    grid-area: principal;
+    height: 650px;
+}
+
+.principal div{
+    background: url("../assets/img/jpg/banner1.jpg") no-repeat center center/cover;
+}
+
+.primero{
+    grid-area: primero;
+}
+
+.primero div{
+    background: url("../assets/img/jpg/banner2.jpg") no-repeat center center/cover;
+}
+
+.segundo{
+    grid-area: segundo;
+}
+
+.segundo div{
+    background: url("../assets/img/jpg/banner3.jpg") no-repeat center center/cover;
+}
+
+.tercero{
+    grid-area: tercero;
+}
+
+.tercero div{
+    background: url("../assets/img/jpg/banner4.jpg") no-repeat center center/cover;
+}
+
+.cuarto{
+    grid-area: cuarto;
+}
+
+.cuarto div{
+    background: url("../assets/img/jpg/banner5.jpg") no-repeat center center/cover;
+}
+
+#blog a{
+    padding: 1em 0;
+}
+
+#blog a div{
+    overflow:hidden;
+    position: relative;
+    height: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#blog a div span{
+    position: absolute;
+    bottom: -45px;
+    left: 0;
+    right: 0;
+    background-color: var(--principal);
+    color: white;
+    text-align: center;
+    padding: .5em 0;
+    transition: all 300ms ease-in-out;
+}
+
+#blog a:hover div span{
+    bottom: 0;
+}
+
+#blog a{
+    color: black;
+}
+
+#blog a h2{
+    margin: 1em 0;
+    font-size: 1em;
+}
+
+#blog a h2::after{
+    content: "";
+    display: block;
+    height: 2px;
+    width: 25%;
+    background-color: var(--secundario);
+    margin-top: .5em;
+}
+
+#blog a p{
+    text-align: justify;
+}
+
+#blog .paginacion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    margin-top: 1.5em;
+}
+
+#blog .paginacion span{
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    background-color: var(--secundario);
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+#blog .paginacion span:hover{
+    background-color: hsl(245, 31%, 25%);
+}
+
+#blog .paginacion span:first-child{
+    background-color: hsl(245, 31%, 25%);
+}
+
+@media only screen and (max-width: 1140px) {
+    #blog #entradas{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+                            "principal principal"
+                            "principal principal"
+                            "primero segundo"
+                            "tercero cuarto";
+    }
+
+    #blog a{
+        height: 350px;
+    }
+
+    #blog a.principal{
+        min-height: 450px;
+        max-height: 100vh;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #blog #entradas{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+                            "principal"
+                            "primero"
+                            "segundo"
+                            "tercero"
+                            "cuarto";
+    }
+
+    #blog a div span{
+        bottom: 0px;
+    }
+}
+
