@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Dulce Capricho - Los mejores pasteles de tu ciudad</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../assets/img/logo.png" type="image/png"/>
+    <script type="text/javascript" src="../js/app.js" defer></script>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <a href="../index.html">
+            <img src="../assets/img/logo.png" alt="Logo de la web">
+        </a> 
+        <div class="hamburguesa">
+            <span></span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="#">Tienda</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <i class="fas fa-shopping-bag"></i>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+
+        <!-- TIENDA -->
+        <section id="tienda">
+            <h1>Tienda</h1>
+            <div class="filtros">
+                <span class="filtro activo" data-filter="todas">Todas</span>
+                <span class="filtro" data-filter="chocolate">Chocolate</span>
+                <span class="filtro" data-filter="nata">Nata</span>             
+            </div>
+            
+            <div id="pasteles">
+              <div class="pastel" data-filter="nata">
+                    <img src="../assets/img/png/pastel1.png" alt="pastel">
+                    <h3>Tarta de nata y fresa</h3>
+                    <h4>11,60€</h4>
+                    <p>Esta espectacular tarta te dejará más que satisfecho.</p>
+              </div>
+              <div class="pastel" data-filter="chocolate">
+                <img src="../assets/img/png/pastel2.png" alt="pastel">
+                <h3>Tarta de tres chocolates</h3>
+                <h4>18€</h4>
+                <p>No uno, ni dos, sino tres son los tipos de chocolate que componen esta obra de arte para tus sentidos.</p>
+            </div>
+            <div class="pastel" data-filter="nata">
+                <img src="../assets/img/png/pastel3.png" alt="pastel">
+                <h3>Tarta de nata montada</h3>
+                <h4>16€</h4>
+                <p>La clásica pero con nuestro toque maestro. Pruébala y nota la diferencia.</p>
+            </div>
+            <div class="pastel" data-filter="chocolate">
+                <img src="../assets/img/png/pastel4.png" alt="pastel">
+                <h3>Tarta de Oreo</h3>
+                <h4>20€</h4>
+                <p>¿Te gustan las galletas Oreo? Pues no se habla más. Aquí te traemos el que probablemente se convierte en tu capricho preferido.</p>
+            </div>
+              
+            </div>
+            <div class="comprar no_ver">
+                <div>
+                    <img src="../assets/img/png/pastel1.png" alt="pastel">
+                    <div>
+                        <h3>Tarta de nata y fresa</h3>
+                        <h4>11,60€</h4>
+                        <p>Esta espectacular tarta te dejará más que satisfecho.</p>
+                        <a href="#">Comprar</a>
+                    </div>
+                    <span>X</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div>
+            <img src="../assets/img/logo.png" alt="logo">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="#">Tienda</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li><a href="#">Términos legales</a></li>
+                <li><a href="#">Política de privacidad</a></li>
+                <li><a href="#">Política de cookies</a></li>
+            </ul>
+        </div>
+       <div>
+           <small>&copy;Copyright 2021 Mi Dulce Capricho</small>
+       </div>
+    </footer>
+</body>
+</html>

@@ -376,7 +376,7 @@ main{
     text-align: center;
 }
 
-#especialidades #pasteles{
+#pasteles{
     padding: 2em;
     display: flex;
     justify-content: center;
@@ -388,7 +388,7 @@ main{
     margin: 0 auto;
 }
 
-#especialidades .pastel{
+.pastel{
     width: 250px;
     align-self: normal;
     display: flex;
@@ -397,7 +397,7 @@ main{
     flex-direction: column;
 }
 
-#especialidades .pastel img{
+.pastel img{
     margin-bottom: auto;
 }
 
@@ -407,7 +407,7 @@ main{
     margin-top: .5em;
 }
 
-#especialidades .pastel p{
+.pastel p{
     text-align: justify;
     margin-top: 1em;
 }
@@ -908,3 +908,244 @@ footer small{
     }
 }
 
+/* ENTRADA */
+#entrada{
+    padding: 4em 0;
+}
+
+#entrada h1{
+    text-align: center;
+    font-size: 2em;
+}
+
+#entrada div{
+    border-radius: 25px;
+    background-color: white;
+    max-width: 900px;
+    margin: 4em auto;
+    padding: 2em;
+}
+
+#entrada img{
+    margin-bottom: 2em;
+}
+
+/* OTRAS ENTRADAS */
+#otrasEntradas{
+    padding: 0 2em 4em;
+}
+
+#otrasEntradas h2{
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 2em;
+}
+
+#otrasEntradas>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3em;
+}
+
+#otrasEntradas>div a div{
+    overflow:hidden;
+    position: relative;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#otrasEntradas>div a div span{
+    position: absolute;
+    bottom: -45px;
+    left: 0;
+    right: 0;
+    background-color: var(--principal);
+    color: white;
+    text-align: center;
+    padding: .5em 0;
+    transition: all 300ms ease-in-out;
+}
+
+#otrasEntradas>div a:hover div span{
+    bottom: 0;
+}
+
+#otrasEntradas>div a{
+    color: black;
+}
+
+#otrasEntradas>div a h3{
+    margin: 1em 0;
+    font-size: 1em; 
+    font-family: "Bite Chocolate", cursive;
+}
+
+#otrasEntradas>div a h3::after{
+    content: "";
+    display: block;
+    height: 2px;
+    width: 25%;
+    background-color: var(--secundario);
+    margin-top: .5em;
+}
+
+#otrasEntradas>div a p{
+    text-align: justify;
+}
+
+/* TIENDA */
+#tienda{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 4em 2em;
+}
+
+#tienda h1{
+    font-size: 3em;
+    text-align: center;
+}
+
+#tienda h3{
+    text-align: center;
+    font-size: 2em;
+}
+
+.esconder { 
+    display: none;
+}
+
+.mostrar { 
+    display: inline-flex;
+}
+
+.filtros {
+    margin: 2em auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    background-color: var(--secundario);
+    border-radius: 15px;
+    width: max-content;
+    padding: .5em 1em;
+    color: var(--principal-claro);
+}
+
+.filtro::after{
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0%;
+    background-color: var(--principal-claro);
+    margin: 0 auto;
+    transition: all 300ms ease-in-out;
+}
+
+.filtro:hover {
+    cursor: pointer;
+}
+
+.filtro:hover::after{
+    width: 100%;
+}
+
+#tienda .pastel{
+    cursor: pointer;
+}
+
+#tienda h4{
+    font-size: 3em;
+    color: var(--secundario);
+    margin: .5em 0;
+}
+
+#tienda .comprar{
+    margin-top: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - 80px);
+    z-index: 800;
+    background-color: rgba(0,0,0,.8);
+    justify-content: center;
+    align-items: center;
+}
+
+#tienda .comprar>div{
+    border-radius: 20px;
+    background-color: var(--principal-claro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 2em;
+}
+
+.comprar>div img{
+    width: 300px;
+}
+
+.comprar h3{
+    text-align: left !important;
+}
+
+.comprar a{
+    display: block;
+    background-color: var(--principal-claro);
+    text-align: center;
+    padding: .5em 1em;
+    color: var(--secundario);
+    border-radius: 20px;
+    border: 3px solid var(--secundario);
+    font-weight: bold;
+    font-size: 1.5em;
+    text-shadow: 1px 1px 0px black;
+    margin-top: 1.5em;
+    transition: all 300ms ease-in-out;
+}
+
+.comprar a:hover{
+    background-color: var(--secundario);
+    color: var(--principal-claro);
+}
+
+.comprar span{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
+.no_ver{
+    display: none;
+}
+
+.ver{
+    display: flex;
+}
+
+
+@media only screen and (max-width: 768px) {
+    #tienda .comprar>div{
+        flex-direction: column;
+    }
+
+    #tienda .comprar>div img{
+        width: 150px;
+    }
+
+    #tienda .comprar>div h3{
+        font-size: 2em;
+    }
+
+    #tienda .comprar>div h4{
+        font-size: 2em;
+    }
+}
