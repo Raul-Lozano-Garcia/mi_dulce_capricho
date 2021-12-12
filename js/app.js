@@ -6,8 +6,8 @@ const toggle=document.querySelector(".hamburguesa span");
 
 boton.addEventListener("click",
     ()=>{
-        nav.classList.toggle('mostrar');
-        toggle.classList.toggle('mostrar');
+        nav.classList.toggle('aparecer');
+        toggle.classList.toggle('aparecer');
     });
 
 
