@@ -5,9 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Dulce Capricho - Los mejores pasteles de tu ciudad</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="css/lightbox.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="assets/img/logo.png" type="image/png"/>
+    <script src="js/lightbox-plus-jquery.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="js/app.js" defer></script>
 </head>
 <body>
@@ -77,6 +81,19 @@
             </div>
         </section>
 
+        <!-- GALERÍA -->
+        <section id="galeria">
+            <h2>Galería</h2>
+            <div>
+            <a href="assets/img/jpg/banner1.jpg" class="ancho" data-lightbox="roadtrip" ></a>
+            <a href="assets/img/jpg/banner2.jpg" class="alto" data-lightbox="roadtrip" ></a>
+            <a href="assets/img/jpg/banner3.jpg" data-lightbox="roadtrip" ></a>
+            <a href="assets/img/jpg/banner4.jpg" class="alto ancho" data-lightbox="roadtrip" ></a>
+            <a href="assets/img/jpg/banner5.jpg" class="ancho" data-lightbox="roadtrip" ></a>
+            <a href="assets/img/jpg/banner6.jpg" data-lightbox="roadtrip" ></a>
+            </div>
+        </section>
+
         <!-- HISTORIA -->
         <section id="historia">
             <h2>Nuestra historia</h2>
@@ -91,15 +108,34 @@
 
         <!-- TESTIMONIOS -->
         <section id="testimonios">
-            <div>
-                <h2>Nuestros clientes opinan</h2>
-                <div class="fotoCliente">
-                    <i class="fas fa-caret-left"></i>
-                    <img src="assets/img/jpg/cliente1.jpg" alt="cliente1">
-                    <i class="fas fa-caret-right"></i>
-                </div>
-                <h3>Jose María</h3>
-                <p>"Muy amables en el trato, atentos a cualquier cosa que se les pida y como no, las tartas deliciosas. ¡El sitio perfecto para darse un buen capricho!"</p>
+            <h2>Nuestros clientes opinan</h2>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="fotoCliente">
+                            <img src="assets/img/jpg/cliente1.jpg" alt="cliente1">
+                        </div>
+                        <h3>Jose María</h3>
+                        <p>"Muy amables en el trato, atentos a cualquier cosa que se les pida y como no, las tartas deliciosas. ¡El sitio perfecto para darse un buen capricho!"</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="fotoCliente">
+                            <img src="assets/img/jpg/cliente2.jpg" alt="cliente1">
+                        </div>
+                        <h3>Selena</h3>
+                        <p>"Me ha encantado la variedad de tartas y pasteles que hay. Gran experiencia"</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="fotoCliente">
+                            <img src="assets/img/jpg/cliente3.jpg" alt="cliente1">
+                        </div>
+                        <h3>Marcos</h3>
+                        <p>"Encargué una tarta para mi cumpleaños y fue exactamente como quería. ¡Conmigo ya tienen un cliente fijo!"</p>
+                    </div>
+                  </div>
+                  <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
             </div>     
         </section>
     </main>
