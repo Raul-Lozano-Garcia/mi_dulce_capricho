@@ -1434,3 +1434,67 @@ footer small{
         text-align: center;
     }
 }
+
+/* CARRITO */
+#carrito{
+    position: absolute;
+    right: -600px;
+    top:80px;
+    background-color: var(--principal);
+    z-index: 850;
+    transition: all 300ms ease-in-out;
+    padding: 1.5em;
+    border-left: solid 1px white;
+    border-bottom: solid 1px white;
+}
+
+#carrito img{
+    width: 200px;
+}
+
+#carrito h4{
+    text-align: center;
+    color: white;
+    font-size: 1.5em;
+}
+
+#carrito div{
+    margin: 1em 0;
+    text-align: center;
+}
+
+#carrito div input{
+    width: 30%;
+    padding: 1em .5em;
+    outline: none;
+    font-size: 1em;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+#carrito div i{
+    color: white;
+    font-size: 1.75em;
+}
+
+#carrito div::after{
+    content: "";
+    display: block;
+    height: 3px;
+    width: 90%;
+    margin: 1em auto;
+    background-color: white;
+}
+
+#carrito a{
+    background-color: var(--secundario) !important;
+    color: white;
+    margin: 0 auto;
+    width: max-content;
+    display: block;
+    padding: .5em 1em;
+    border-radius: 15px;
+}
+
+.desplegar{
+    right: 0 !important;
+}

@@ -83,3 +83,11 @@ if(document.querySelector(".mySwiper")!==null){
         },
       });
 }
+
+const bolsa=document.querySelector(".fa-shopping-bag");
+const carrito=document.querySelector("#carrito");
+
+bolsa.addEventListener("click",
+        ()=>{
+          carrito.classList.toggle('desplegar');
+        });
