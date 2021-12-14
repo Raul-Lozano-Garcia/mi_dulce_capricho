@@ -479,6 +479,11 @@ main{
   #galeria>div>a {
     grid-column: span 1;
     grid-row: span 1;
+    transition: all 300ms ease-in-out;
+  }
+
+  #galeria>div>a:hover{
+    opacity: .5;
   }
   
   @media (min-width: 768px) {
@@ -1229,12 +1234,20 @@ footer small{
     text-align: left !important;
 }
 
+.comprar .info::after{
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: var(--secundario);
+    display: block;
+    margin: 1em 0;
+}
+
 .comprar form{
     margin-top: 1em;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 1em;
 }
 
 .comprar form input[type=number]{
@@ -1252,12 +1265,33 @@ footer small{
     background-color: var(--secundario);
 }
 
+.comprar form p{
+    margin-left: 1em;
+    font-weight: bold;
+}
+
 .comprar span{
     position: absolute;
     top: 10px;
     right: 10px;
     cursor: pointer;
     font-size: 1.5em;
+}
+
+.comprar table{
+    border-collapse: collapse;
+    text-align: center;
+    margin: 1em 0;
+}
+
+.comprar table td, .comprar table th{
+    border: solid 1px var(--secundario);
+    padding: .5em 1em;
+}
+
+.comprar table th{
+    background-color: var(--secundario);
+    color: var(--principal-claro);
 }
 
 .no_ver{
