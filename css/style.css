@@ -706,10 +706,6 @@ main{
     border: none;
 }
 
-#contacto form>input:hover{
-    background-color: hsl(32, 31%, 25%);
-}
-
 #contacto form>input[type=submit]{
     background-color: var(--secundario);
     color: var(--principal-claro);
