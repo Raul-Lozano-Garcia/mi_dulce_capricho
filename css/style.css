@@ -161,8 +161,6 @@ header li a{
     font-weight: bold;
 } 
 
-/* ARREGLAR TRANSICIONES CUANDO VOY CAMBIANDO TAMAÑO PANTALLA EN TOGGLE Y NAV */
-
 @media only screen and (min-width: 769px) {
     header .hamburguesa{
         display: none;
@@ -194,6 +192,92 @@ main{
     background-color: var(--principal-claro);
 }
 
+/* CARRITO */
+#carrito{
+    position: absolute;
+    right: 0;
+    top:-500px;
+    background-color: var(--principal);
+    z-index: 850;
+    transition: all 300ms ease-in-out;
+    padding: 1.5em;
+    border-left: solid 1px white;
+    border-bottom: solid 1px white;
+}
+
+#carrito h4{
+    text-align: center;
+    color: white;
+    font-size: 2em;
+}
+
+#carrito h4::after{
+    content: "";
+    display: block;
+    height: 3px;
+    width: 90%;
+    margin: 1em auto;
+    background-color: white;
+}
+
+#carrito img{
+    width: 200px;
+}
+
+#carrito h5{
+    text-align: center;
+    color: white;
+    font-size: 1.5em;
+}
+
+#carrito div{
+    margin: 1em 0;
+    text-align: center;
+}
+
+#carrito div .cantidad{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+#carrito div input{
+    width: 25%;
+    padding:.5em;
+    outline: none;
+    font-size: 1em;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+#carrito div i{
+    color: white;
+    font-size: 1.75em;
+}
+
+#carrito>div::after{
+    content: "";
+    display: block;
+    height: 3px;
+    width: 90%;
+    margin: 1em auto;
+    background-color: white;
+}
+
+#carrito a{
+    background-color: var(--secundario) !important;
+    color: white;
+    margin: 0 auto;
+    width: max-content;
+    display: block;
+    padding: .5em 1em;
+    border-radius: 15px;
+}
+
+.desplegar{
+    top: 80px !important;
+}
+
 /* BANNER */
 #banner{
     position: relative;
@@ -218,7 +302,7 @@ main{
 #banner .titulos{
     color: white;
     text-shadow: 0px 0px 20px black;
-    background-color: hsla(245, 31%, 50%, 0.521);
+    background-color: hsla(245, 31%, 50%, 0.5);
     padding: 1.5em;
     text-align: center;
     gap: 2em;
@@ -673,152 +757,6 @@ main{
     object-fit: cover;
   }
 
-/* CONTACTO */
-#contacto{
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 4em 0;
-}
-
-#contacto>div{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-#contacto form{
-    flex: 1;
-    padding: 2em;
-    background-color: var(--principal);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-    min-width: 300px;
-    gap: 2em;
-}
-
-#contacto form input,#contacto form textarea{
-    outline: none;
-    padding: .5em;
-    width: 80%;
-    font-family: 'Be Vietnam Pro', sans-serif;
-    border-radius: 15px;
-    margin:0 auto;
-    color: black;
-    background-color: white;
-    
-    border: none;
-}
-
-#contacto form>input[type=submit]{
-    background-color: var(--secundario);
-    color: var(--principal-claro);
-    cursor: pointer;
-    transition: all 300ms ease-in-out;
-}
-
-#contacto form>input[type=submit]:hover{
-    transform: scale(1.1);
-}
-
-#contacto .contactanos{
-    flex: 1;
-    padding: 2em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1em;
-    background: var(--secundario-claro) url("../assets/img/jpg/banner7.webp") no-repeat center center /cover;
-    background-blend-mode: luminosity;
-}
-
-#contacto .contactanos h2{
-    color: white;
-    backdrop-filter: blur(2px);
-    padding: 2em;
-}
-
-#contacto .contactanos h2::after{
-    content: "";
-    display: block;
-    height: 2px;
-    width: 100%;
-    background-color: var(--principal-claro);
-    margin-top: .5em;
-}
-
-#contacto .contactanos div{
-    backdrop-filter: blur(2px);
-    color: white;
-    padding: 1em 2em;
-    width: 250px;
-    text-shadow: 0px 0px 15px black;
-}
-
-@media only screen and (max-width: 769px) {
-    /* #contacto form div{
-        flex-direction: column;
-    }
-
-    #contacto form input,#contacto form textarea{
-        width: 100%;
-    }
-
-    #contacto form{
-        padding: 1em;
-    } */
-}
-
-/* MAPA */
-#mapa{
-    padding: 2em 1em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 3em;
-    flex-direction: column;
-}
-
-#mapa h2{
-    font-size: 4em;
-    text-align: center;
-}
-
-#mapa i{
-    font-size: 6em;
-    color: var(--principal);
-    animation: senalar 2s infinite;
-}
-
-#mapa iframe{
-    width: 70%;
-}
-
-@keyframes senalar {
-    0%{
-        transform: translateY(0px);
-    }
-    50%{
-        transform: translateY(10px);
-    }
-    100%{
-        transform: translateY(0px);
-    }
-}
-
-@media only screen and (max-width: 769px) {
-    #mapa h2{
-        font-size: 2em;
-        text-align: center;
-    }
-    
-    #mapa iframe{
-        width: 90%;
-    }
-}
-
 /* FOOTER */
 footer{
     background-color: black;
@@ -865,277 +803,7 @@ footer small{
     }
 }
 
-/* BLOG */
-#blog{
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 4em 0;
-}
 
-#blog h1{
-    text-align: center;
-    font-size: 3em;
-}
-
-#blog>p{
-    margin: 2em 0 3em;
-    text-align: center;
-}
-
-#blog #entradas{
-    padding: 0 2em;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-areas: 
-                        "principal principal primero segundo"
-                        "principal principal tercero cuarto";
-    gap: 2em;
-}
-
-.principal{
-    grid-area: principal;
-    height: 650px;
-}
-
-.principal div{
-    background: url("../assets/img/jpg/banner1.jpg") no-repeat center center/cover;
-}
-
-.primero{
-    grid-area: primero;
-}
-
-.primero div{
-    background: url("../assets/img/jpg/banner2.jpg") no-repeat center center/cover;
-}
-
-.segundo{
-    grid-area: segundo;
-}
-
-.segundo div{
-    background: url("../assets/img/jpg/banner3.jpg") no-repeat center center/cover;
-}
-
-.tercero{
-    grid-area: tercero;
-}
-
-.tercero div{
-    background: url("../assets/img/jpg/banner4.jpg") no-repeat center center/cover;
-}
-
-.cuarto{
-    grid-area: cuarto;
-}
-
-.cuarto div{
-    background: url("../assets/img/jpg/banner5.jpg") no-repeat center center/cover;
-}
-
-#blog a{
-    padding: 1em 0;
-}
-
-#blog a div{
-    overflow:hidden;
-    position: relative;
-    height: 45%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-#blog a div span{
-    position: absolute;
-    bottom: -45px;
-    left: 0;
-    right: 0;
-    background-color: var(--principal);
-    color: white;
-    text-align: center;
-    padding: .5em 0;
-    transition: all 300ms ease-in-out;
-}
-
-#blog a:hover div span{
-    bottom: 0;
-}
-
-#blog a{
-    color: black;
-}
-
-#blog a h2{
-    margin: 1em 0;
-    font-size: 1em;
-}
-
-#blog a h2::after{
-    content: "";
-    display: block;
-    height: 2px;
-    width: 25%;
-    background-color: var(--secundario);
-    margin-top: .5em;
-}
-
-#blog a p{
-    text-align: justify;
-}
-
-#blog .paginacion{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1em;
-    margin-top: 1.5em;
-}
-
-#blog .paginacion span{
-    width: 1.5em;
-    height: 1.5em;
-    border-radius: 50%;
-    background-color: var(--secundario);
-    color: white;
-    text-align: center;
-    cursor: pointer;
-}
-
-#blog .paginacion span:hover{
-    background-color: hsl(245, 31%, 25%);
-}
-
-#blog .paginacion span:first-child{
-    background-color: hsl(245, 31%, 25%);
-}
-
-@media only screen and (max-width: 1140px) {
-    #blog #entradas{
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas: 
-                            "principal principal"
-                            "principal principal"
-                            "primero segundo"
-                            "tercero cuarto";
-    }
-
-    #blog a{
-        height: 350px;
-    }
-
-    #blog a.principal{
-        min-height: 450px;
-        max-height: 100vh;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    #blog #entradas{
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-                            "principal"
-                            "primero"
-                            "segundo"
-                            "tercero"
-                            "cuarto";
-    }
-
-    #blog a div span{
-        bottom: 0px;
-    }
-}
-
-/* ENTRADA */
-#entrada{
-    padding: 4em 0;
-}
-
-#entrada h1{
-    text-align: center;
-    font-size: 2em;
-}
-
-#entrada div{
-    border-radius: 25px;
-    background-color: white;
-    max-width: 900px;
-    margin: 4em auto;
-    padding: 2em;
-}
-
-#entrada img{
-    margin-bottom: 2em;
-}
-
-/* OTRAS ENTRADAS */
-#otrasEntradas{
-    padding: 0 2em 4em;
-}
-
-#otrasEntradas h2{
-    text-align: center;
-    font-size: 2em;
-    margin-bottom: 2em;
-}
-
-#otrasEntradas>div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 3em;
-}
-
-#otrasEntradas>div a div{
-    overflow:hidden;
-    position: relative;
-    height: 250px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-#otrasEntradas>div a div span{
-    position: absolute;
-    bottom: -45px;
-    left: 0;
-    right: 0;
-    background-color: var(--principal);
-    color: white;
-    text-align: center;
-    padding: .5em 0;
-    transition: all 300ms ease-in-out;
-}
-
-#otrasEntradas>div a:hover div span{
-    bottom: 0;
-}
-
-#otrasEntradas>div a{
-    color: black;
-}
-
-#otrasEntradas>div a h3{
-    margin: 1em 0;
-    font-size: 1em; 
-    font-family: "Bite Chocolate", cursive;
-}
-
-#otrasEntradas>div a h3::after{
-    content: "";
-    display: block;
-    height: 2px;
-    width: 25%;
-    background-color: var(--secundario);
-    margin-top: .5em;
-}
-
-#otrasEntradas>div a p{
-    text-align: justify;
-}
 
 /* TIENDA */
 #tienda{
@@ -1435,88 +1103,404 @@ footer small{
     }
 }
 
-/* CARRITO */
-#carrito{
-    position: absolute;
-    right: 0;
-    top:-500px;
-    background-color: var(--principal);
-    z-index: 850;
-    transition: all 300ms ease-in-out;
-    padding: 1.5em;
-    border-left: solid 1px white;
-    border-bottom: solid 1px white;
+/* BLOG */
+#blog{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 4em 0;
 }
 
-#carrito h4{
+#blog h1{
     text-align: center;
-    color: white;
-    font-size: 2em;
+    font-size: 3em;
 }
 
-#carrito h4::after{
+#blog>p{
+    margin: 2em 0 3em;
+    text-align: center;
+}
+
+#blog #entradas{
+    padding: 0 2em;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+                        "principal principal primero segundo"
+                        "principal principal tercero cuarto";
+    gap: 2em;
+}
+
+.principal{
+    grid-area: principal;
+    height: 650px;
+}
+
+.principal div{
+    background: url("../assets/img/jpg/banner1.jpg") no-repeat center center/cover;
+}
+
+.primero{
+    grid-area: primero;
+}
+
+.primero div{
+    background: url("../assets/img/jpg/banner2.jpg") no-repeat center center/cover;
+}
+
+.segundo{
+    grid-area: segundo;
+}
+
+.segundo div{
+    background: url("../assets/img/jpg/banner3.jpg") no-repeat center center/cover;
+}
+
+.tercero{
+    grid-area: tercero;
+}
+
+.tercero div{
+    background: url("../assets/img/jpg/banner4.jpg") no-repeat center center/cover;
+}
+
+.cuarto{
+    grid-area: cuarto;
+}
+
+.cuarto div{
+    background: url("../assets/img/jpg/banner5.jpg") no-repeat center center/cover;
+}
+
+#blog a{
+    padding: 1em 0;
+}
+
+#blog a div{
+    overflow:hidden;
+    position: relative;
+    height: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#blog a div span{
+    position: absolute;
+    bottom: -45px;
+    left: 0;
+    right: 0;
+    background-color: var(--principal);
+    color: white;
+    text-align: center;
+    padding: .5em 0;
+    transition: all 300ms ease-in-out;
+}
+
+#blog a:hover div span{
+    bottom: 0;
+}
+
+#blog a{
+    color: black;
+}
+
+#blog a h2{
+    margin: 1em 0;
+    font-size: 1em;
+}
+
+#blog a h2::after{
     content: "";
     display: block;
-    height: 3px;
-    width: 90%;
-    margin: 1em auto;
-    background-color: white;
+    height: 2px;
+    width: 25%;
+    background-color: var(--secundario);
+    margin-top: .5em;
 }
 
-#carrito img{
-    width: 200px;
+#blog a p{
+    text-align: justify;
 }
 
-#carrito h5{
-    text-align: center;
-    color: white;
-    font-size: 1.5em;
-}
-
-#carrito div{
-    margin: 1em 0;
-    text-align: center;
-}
-
-#carrito div .cantidad{
+#blog .paginacion{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1em;
+    margin-top: 1.5em;
 }
 
-#carrito div input{
-    width: 25%;
-    padding:.5em;
-    outline: none;
-    font-size: 1em;
-    font-family: 'Be Vietnam Pro', sans-serif;
-}
-
-#carrito div i{
+#blog .paginacion span{
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    background-color: var(--secundario);
     color: white;
-    font-size: 1.75em;
+    text-align: center;
+    cursor: pointer;
 }
 
-#carrito>div::after{
+#blog .paginacion span:hover{
+    background-color: hsl(245, 31%, 25%);
+}
+
+#blog .paginacion span:first-child{
+    background-color: hsl(245, 31%, 25%);
+}
+
+@media only screen and (max-width: 1140px) {
+    #blog #entradas{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+                            "principal principal"
+                            "principal principal"
+                            "primero segundo"
+                            "tercero cuarto";
+    }
+
+    #blog a{
+        height: 350px;
+    }
+
+    #blog a.principal{
+        min-height: 450px;
+        max-height: 100vh;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #blog #entradas{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+                            "principal"
+                            "primero"
+                            "segundo"
+                            "tercero"
+                            "cuarto";
+    }
+
+    #blog a div span{
+        bottom: 0px;
+    }
+}
+
+/* ENTRADA */
+#entrada{
+    padding: 4em 0;
+}
+
+#entrada h1{
+    text-align: center;
+    font-size: 2em;
+}
+
+#entrada div{
+    border-radius: 25px;
+    background-color: white;
+    max-width: 900px;
+    margin: 4em auto;
+    padding: 2em;
+}
+
+#entrada img{
+    margin-bottom: 2em;
+}
+
+#otrasEntradas{
+    padding: 0 2em 4em;
+}
+
+#otrasEntradas h2{
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 2em;
+}
+
+#otrasEntradas>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3em;
+}
+
+#otrasEntradas>div a div{
+    overflow:hidden;
+    position: relative;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#otrasEntradas>div a div span{
+    position: absolute;
+    bottom: -45px;
+    left: 0;
+    right: 0;
+    background-color: var(--principal);
+    color: white;
+    text-align: center;
+    padding: .5em 0;
+    transition: all 300ms ease-in-out;
+}
+
+#otrasEntradas>div a:hover div span{
+    bottom: 0;
+}
+
+#otrasEntradas>div a{
+    color: black;
+}
+
+#otrasEntradas>div a h3{
+    margin: 1em 0;
+    font-size: 1em; 
+    font-family: "Bite Chocolate", cursive;
+}
+
+#otrasEntradas>div a h3::after{
     content: "";
     display: block;
-    height: 3px;
-    width: 90%;
-    margin: 1em auto;
-    background-color: white;
+    height: 2px;
+    width: 25%;
+    background-color: var(--secundario);
+    margin-top: .5em;
 }
 
-#carrito a{
-    background-color: var(--secundario) !important;
-    color: white;
+#otrasEntradas>div a p{
+    text-align: justify;
+}
+
+/* CONTACTO */
+#contacto{
+    max-width: 800px;
     margin: 0 auto;
-    width: max-content;
-    display: block;
-    padding: .5em 1em;
-    border-radius: 15px;
+    padding: 4em 0;
 }
 
-.desplegar{
-    top: 80px !important;
+#contacto>div{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#contacto form{
+    flex: 1;
+    padding: 2em;
+    background-color: var(--principal);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-width: 300px;
+    gap: 2em;
+}
+
+#contacto form input,#contacto form textarea{
+    outline: none;
+    padding: .5em;
+    width: 80%;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    border-radius: 15px;
+    margin:0 auto;
+    color: black;
+    background-color: white;
+    
+    border: none;
+}
+
+#contacto form>input[type=submit]{
+    background-color: var(--secundario);
+    color: var(--principal-claro);
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+#contacto form>input[type=submit]:hover{
+    transform: scale(1.1);
+}
+
+#contacto .contactanos{
+    flex: 1;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    background: var(--secundario-claro) url("../assets/img/jpg/banner7.webp") no-repeat center center /cover;
+    background-blend-mode: luminosity;
+}
+
+#contacto .contactanos h2{
+    color: white;
+    backdrop-filter: blur(2px);
+    padding: 2em;
+}
+
+#contacto .contactanos h2::after{
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: var(--principal-claro);
+    margin-top: .5em;
+}
+
+#contacto .contactanos div{
+    backdrop-filter: blur(2px);
+    color: white;
+    padding: 1em 2em;
+    width: 250px;
+    text-shadow: 0px 0px 15px black;
+}
+
+#mapa{
+    padding: 2em 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    flex-direction: column;
+}
+
+#mapa h2{
+    font-size: 4em;
+    text-align: center;
+}
+
+#mapa i{
+    font-size: 6em;
+    color: var(--principal);
+    animation: senalar 2s infinite;
+}
+
+#mapa iframe{
+    width: 70%;
+}
+
+@keyframes senalar {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+@media only screen and (max-width: 769px) {
+    #mapa h2{
+        font-size: 2em;
+        text-align: center;
+    }
+    
+    #mapa iframe{
+        width: 90%;
+    }
 }
