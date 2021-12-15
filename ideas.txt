@@ -1,6 +1,0 @@
-- Banner con carrusel de imagenes.
-- Tienda con filtros y a la hora de añadir al carrito que salga un modal con la info del producto y demás (como en JS). Que no se me olvide añadir el carrito al header.
-- En el index poner especialidades, galeria, historia, testimonios
-
-IDEAS DE:
-https://pasteleriaelsol.es/
